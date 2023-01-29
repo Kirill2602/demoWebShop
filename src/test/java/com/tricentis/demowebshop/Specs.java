@@ -13,9 +13,8 @@ public class Specs {
     public static RequestSpecification request(String contentType) {
         return with()
                 .baseUri("https://demowebshop.tricentis.com/")
-                .contentType("application/x-www-form-urlencoded; charset=UTF-8");
-//                .contentType(ContentType.JSON)
-//                .contentType("application/x-www-form-urlencoded; charset=UTF-8");
+                .contentType(contentType);
+        //"application/x-www-form-urlencoded; charset=UTF-8"
     }
 
     public static ResponseSpecification responseUniqueStatus(int status) {

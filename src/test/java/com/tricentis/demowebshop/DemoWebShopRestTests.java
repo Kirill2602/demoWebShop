@@ -3,8 +3,6 @@ package com.tricentis.demowebshop;
 import com.tricentis.demowebshop.testdata.TestData;
 import org.junit.jupiter.api.Test;
 
-import java.util.Map;
-
 import static com.tricentis.demowebshop.Specs.installSpecifications;
 import static com.tricentis.demowebshop.endpoints.Endpoints.*;
 import static io.restassured.RestAssured.given;
@@ -36,7 +34,7 @@ public class DemoWebShopRestTests {
                 .cookie("__RequestVerificationToken", data.getRequestVerificationToken())
                 .formParams(data.getFormParamsSuccessRegistration())
                 .when()
-                .post("/register")
+                .post(REGISTRATION_ENDPOINT)
                 .then()
                 .extract().body()
                 .asPrettyString();
