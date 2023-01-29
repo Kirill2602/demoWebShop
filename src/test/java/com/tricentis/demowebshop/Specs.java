@@ -14,7 +14,6 @@ public class Specs {
         return with()
                 .baseUri("https://demowebshop.tricentis.com/")
                 .contentType(contentType);
-        //"application/x-www-form-urlencoded; charset=UTF-8"
     }
 
     public static ResponseSpecification responseUniqueStatus(int status) {
